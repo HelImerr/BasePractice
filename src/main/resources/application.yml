@@ -6,4 +6,4 @@ spring:
     password: 1928374650
 
   liquibase:
-    change-log: db/changelog/main-changelog.xml
+    change-log: db/changelog/main-chainglog.xml
