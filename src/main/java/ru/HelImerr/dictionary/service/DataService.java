@@ -12,7 +12,7 @@ import java.util.List;
 public class DataService {
     DataRepository dataRepository;
 
-    public Data createData(Data data){
+    public  Data createData(Data data){
         return dataRepository.save(data);
     }
     public Data findDataById(Long id){

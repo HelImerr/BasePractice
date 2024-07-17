@@ -1,16 +1,12 @@
 package ru.HelImerr.dictionary.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.*;
 
 
 @Entity
 @lombok.Data
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 public class Dictionary {
     @Id
