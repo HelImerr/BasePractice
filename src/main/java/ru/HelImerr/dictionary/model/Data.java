@@ -1,5 +1,6 @@
 package ru.HelImerr.dictionary.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,6 +14,7 @@ public class Data {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false, unique = true)
+    @Schema(hidden = true)
     private Long id;
 
     public Long getId(){
@@ -23,6 +25,7 @@ public class Data {
     }
 
     @Column(name = "dictionary_id")
+    @Schema(name = "dictionary_id", example = "1", required = true)
     private Long dictionary_id;
 
     public Long getDictionary_id(){
@@ -33,6 +36,7 @@ public class Data {
     }
 
     @Column(name = "code", nullable = false)
+    @Schema(name = "code", example = "test", required = true)
     private String code;
 
     public String getCode(){
@@ -43,6 +47,7 @@ public class Data {
     }
 
     @Column(name = "value", nullable = false)
+    @Schema(name = "test", example = "test", required = true)
     private String value;
 
     public String getValue(){
